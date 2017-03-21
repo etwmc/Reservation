@@ -12,11 +12,17 @@
 @interface RestaurantInfoViewController () {
     RestaurantInfoController *con;
     Restaurant *_restaurant;
+    Appoinment *_appoinment;
 }
 @end
 
 @implementation RestaurantInfoViewController
 
+- (void)setAppoinment:(Appoinment *)appoinment {
+    _appoinment = appoinment;
+    self.restaurant = appoinment.restaurant;
+}
+- (Appoinment *)appoinment { return _appoinment; }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -35,7 +41,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    if (_appoinment) self.basicInfoCon.appoinment = _appoinment;
     self.basicInfoCon.restaurant = self.restaurant;
+    self.basicInfoCon.mainView = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated {

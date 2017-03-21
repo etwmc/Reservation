@@ -12,8 +12,8 @@
 
 @interface RestaurantInfoViewController : UIViewController <UIScrollViewDelegate>
 @property (readwrite) Restaurant *restaurant;
+@property (readwrite) Appoinment *appoinment;
 @property IBOutlet UIView *basicInfoView;
-//@property IBOutlet UITableView *additionInfoView;
 @property IBOutlet UIView *additionInfoView;
 @property IBOutlet RestaurantBasicInfoViewController *basicInfoCon;
 - (IBAction)modeChange:(id)sender;

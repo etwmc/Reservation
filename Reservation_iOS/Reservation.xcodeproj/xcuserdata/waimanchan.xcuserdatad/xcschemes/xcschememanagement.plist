@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Reservation.xcscheme</key>
+		<key>Reservation.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -18,6 +18,11 @@
 			<true/>
 		</dict>
 		<key>1EF8FDDE18B368D60030874F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>33F5D6D618FBE18400EACC67</key>
 		<dict>
 			<key>primary</key>
 			<true/>

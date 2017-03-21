@@ -8,7 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol AppoinmentModelDelegate <NSObject>
+- (void)appoinmentModelUpdate;
+@end
+
 @interface AppoinmentModel : NSObject
+@property (readwrite) NSObject <AppoinmentModelDelegate> *delegate;
+@property (readonly) bool available;
 @property (readonly) NSArray *appoinments;
+- (void)refresh;
 + (AppoinmentModel *)shareModel;
 @end

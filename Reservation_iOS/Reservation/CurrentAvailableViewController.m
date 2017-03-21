@@ -10,15 +10,18 @@
 
 #import "Restaurant.h"
 #import "RestaurantInfoViewController.h"
+#import "LoadingViewController.h"
+#import "ProjectConstant.h"
 
-@interface CurrentAvailableViewController ()
-
+@interface CurrentAvailableViewController () {
+    NSArray *availableList;
+}
 @end
 
 @implementation CurrentAvailableViewController
 
 - (NSArray *)arrayOfAvailableRestaurant {
-    return @[[Restaurant testCase], [Restaurant testCase]];
+    return availableList;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -30,18 +33,48 @@
     return self;
 }
 
+- (void)refresh:(id)sender {
+    [[LoadingViewController shareController] startLoading];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSURL *url = [NSURL URLWithString:fetchAddress];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        NSArray *array;
+        if (data) array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:NULL];
+        NSMutableArray *result = [NSMutableArray new];
+        for (NSNumber *number in array) {
+            [result addObject:[[Restaurant alloc] initWithID:number.longLongValue]];
+        }
+        [self gatheredAvailableList:result];
+        [[LoadingViewController shareController] stopLoading];
+    });
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableView.contentInset = UIEdgeInsetsMake(self.navigationController.navigationBar.frame.size.height+20, 0, 0, 0);
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
 }
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.topItem.title = @"Available";
+}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    UIRefreshControl *refreshControl = [UIRefreshControl new];
+    refreshControl.tintColor = [UIColor magentaColor];
+    [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"Getting Nearest Restaurant", @"")];
+    self.refreshControl = refreshControl;
+    [refreshControl sendActionsForControlEvents:UIControlEventValueChanged];
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, self.bottomLayoutGuide.length, 0);
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -50,24 +83,42 @@
 
 #pragma mark - Table view data source
 
+- (void)gatheredAvailableList:(NSArray *)list {
+    if (list) availableList = [list sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        Restaurant *r1, *r2;
+        r1 = obj1;  r2 = obj2;
+        if (r1.currentlyAvailable != r2.currentlyAvailable)
+            return r1.currentlyAvailable?NSOrderedAscending:NSOrderedDescending;
+        return NSOrderedSame;
+    }]; else availableList = @[];
+    [self.tableView reloadData];
+    [self.refreshControl endRefreshing];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self arrayOfAvailableRestaurant].count;
+    NSInteger it = [self arrayOfAvailableRestaurant].count;
+    return it==0?1:it;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if ([self arrayOfAvailableRestaurant].count==0) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Message"];
+        cell.textLabel.text = NSLocalizedString(@"We found no restaurant near you", NULL);
+        return cell;
+    }
+    
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
     
     // Configure the cell...
     cell.textLabel.text = ((Restaurant *)[self arrayOfAvailableRestaurant][indexPath.row]).name;
@@ -83,6 +134,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self arrayOfAvailableRestaurant].count==0) { [tableView deselectRowAtIndexPath:indexPath animated:YES]; return; }
     RestaurantInfoViewController *info = [[RestaurantInfoViewController alloc] initWithNibName:@"RestaurantInfoViewController" bundle:[NSBundle mainBundle]];
     info.restaurant = ((Restaurant *)[self arrayOfAvailableRestaurant][indexPath.row]);
     [self.navigationController pushViewController:info animated:YES];

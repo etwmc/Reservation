@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppoinmentViewController : UITableViewController
+@interface AppoinmentViewController : UITableViewController <UIAlertViewDelegate>
 
 @end

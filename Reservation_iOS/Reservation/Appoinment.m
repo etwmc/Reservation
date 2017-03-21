@@ -7,23 +7,39 @@
 //
 
 #import "Appoinment.h"
+#import "LoginModel.h"
+#import "ProjectConstant.h"
 
 @implementation Appoinment
-@synthesize duration, startDate, restaurantName;
-- (id)init {
+@synthesize duration, startDate, restaurant, appoinmentID;
++(void)appoinmentAtRestaurant:(Restaurant *)r atDate:(NSDate *)date withNumberOfPerson:(unsigned short) numberOfPerson success:(void (^)())successBlock failedBlock:(void (^)())failedBlock {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    NSString *newAddr = [NSString stringWithFormat:CreateAppoinmentAddr, r.sid, [formatter stringFromDate:date]];
+    [[LoginModel shareModel] queryWithAddress:newAddr withQuery:^(NSData *data) {
+        successBlock();
+    } cancel:^{
+        failedBlock();
+    }];
+}
+- (id)initWithDictionary:(NSDictionary *)dict {
     self = [super init];
     if (self) {
-        duration = 3600;
-        startDate = [NSDate date];
-        restaurantName = @"Test";
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+        startDate = [formatter dateFromString:dict[@"Time"]];
+        restaurant = [[Restaurant alloc] initWithID:((NSNumber *)dict[@"Store_idStore"]).longLongValue];
+        appoinmentID = ((NSNumber *)dict[@"idAppoinment"]).longLongValue;
+        duration = restaurant.durationPerMeal;
     }
     return self;
 }
-+ (Appoinment *)testCase {
-    static Appoinment *app = NULL;
-    if (app == NULL) {
-        app = [Appoinment new];
-    }
-    return app;
+
+- (void)cancel {
+    LoginModel *model = [LoginModel shareModel];
+    [model queryWithAddress:[NSString stringWithFormat:CancelAppoinmentAddr, appoinmentID] withQuery:^(NSData *data) {
+        
+    } cancel:^{}];
 }
+
 @end

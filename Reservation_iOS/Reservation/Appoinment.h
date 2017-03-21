@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Restaurant.h"
 
-@interface Appoinment : NSObject
+@interface Appoinment : NSObject {
+    UIAlertView *alert;
+}
+@property (readonly) long long appoinmentID;
 @property (readonly) NSDate *startDate;
-@property (readonly) NSTimeInterval *duration;
-#warning - Not Include in real program
-@property (readonly) NSString *restaurantName;
-+ (Appoinment *)testCase;
+@property (readonly) NSTimeInterval duration;
+@property (readonly) Restaurant *restaurant;
+@property (readonly) unsigned short numberOfPerson;
++(void)appoinmentAtRestaurant:(Restaurant *)r atDate:(NSDate *)date withNumberOfPerson:(unsigned short) numberOfPerson success:(void (^)())successBlock failedBlock:(void (^)())failedBlock;
+- (id)initWithDictionary:(NSDictionary *)dict;
+- (void)cancel;
 @end

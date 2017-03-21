@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+UIViewController *rootController;
+
+@interface FoodTypeViewCell : UICollectionViewCell
+@property (readonly) IBOutlet UILabel *title;
+@property (readonly) IBOutlet UIImageView *backgroundView;
+@end
+
 @interface FoodTypeViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate> {
 }
 @end

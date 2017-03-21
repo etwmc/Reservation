@@ -7,64 +7,67 @@
 //
 
 #import "Restaurant.h"
+#import "ProjectConstant.h"
 
 @interface Restaurant () {
     NSDictionary *dictionary;
     UIImage *logo;
+    NSArray *photoList;
 }
 @end
 
 @implementation Restaurant
-@synthesize durationPerMeal;
-- (id)initWithID:(int)restaurantID {
+@synthesize durationPerMeal, sid;
++ (Restaurant *)testCase {
+}
+- (id)initWithID:(long long)restaurantID {
     self = [super init];
     if (self) {
-        if (restaurantID > 0) {
-            NSString *InfoAddress = [NSString stringWithFormat:@"http://happywaiman.dlinkddns.com:10000/Reserve/Company/Info.php?id=%d", restaurantID];
-            NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:InfoAddress]];
-            dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
-        }
-        else {
-            dictionary = @{@"Name": @"Test Case", @"Phone Number": @"+THIS-IS-TEST-NUM", @"Address": @"Testing Adddress", @"Open Hour" : @"07:00", @"Close Hour" : @"23:00", @"Meal Duration" : @(60*60*2)};
-        }
+        NSString *InfoAddress = [NSString stringWithFormat:restaurantInfo, restaurantID];
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:InfoAddress]];
+        dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
         durationPerMeal = ((NSNumber *)(dictionary[@"Meal Duration"])).doubleValue;
+        sid = restaurantID;
     }
     return self;
 }
-+ (Restaurant *)testCase {
-    return [[Restaurant alloc] initWithID:-1];
-}
 //Info Retrieve
-- (NSString *)name { return dictionary[@"Name"]; }
-- (NSString *)phoneNumber { return dictionary[@"Phone Number"]; }
-- (NSString *)address { return dictionary[@"Address"]; }
+- (NSString *)name { return dictionary[@"CompanyName"]; }
+- (NSString *)phoneNumber { return dictionary[@"phoneNumber"]; }
+- (NSString *)address { return dictionary[@"StoreAddr"]; }
 - (UIImage *)restaurantLogo {
     if (logo) return logo;
-    logo = [UIImage imageWithData:[NSData dataWithContentsOfURL:dictionary[@"logoAddr"]]];
+    NSURL *url = [NSURL URLWithString:dictionary[@"LogoAddress"]];
+    logo = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
     if (!logo) logo = [UIImage imageNamed:@"Chinese".lowercaseString];
     return logo;
 }
 - (NSArray *)listOfPicture {
-    return dictionary[@"List of Picture"];
+    NSURL *url = [NSURL URLWithString:dictionary[@"ListofPicture"]];
+    if (photoList == NULL) {
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        photoList = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:NULL];
+    }
+    return photoList;
 }
 
 - (BOOL)currentlyAvailable {
-    return random()>LONG_MAX/2;
+#warning - Not defined
+    return sid<10;
 }
 
 + (NSDateFormatter *)dateFormatter {
     static NSDateFormatter *formatter = NULL;
     if (formatter == NULL) {
         formatter = [NSDateFormatter new];
-        [formatter setDateFormat:@"HH:mm"];
+        [formatter setDateFormat:@"HH:mm:ss"];
     }
     return formatter;
 }
 - (NSDate *)openHour {
-    return [[Restaurant dateFormatter] dateFromString:dictionary[@"Open Hour"]];
+    return [[Restaurant dateFormatter] dateFromString:dictionary[@"OpenHour"]];
 }
 - (NSDate *)closeHour {
-    return [[Restaurant dateFormatter] dateFromString:dictionary[@"Close Hour"]];
+    return [[Restaurant dateFormatter] dateFromString:dictionary[@"CloseHour"]];
 }
-
 @end

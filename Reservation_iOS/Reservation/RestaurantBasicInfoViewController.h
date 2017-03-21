@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "Restaurant.h"
+#import "Appoinment.h"
 
-@interface RestaurantBasicInfoViewController : NSObject
+@interface RestaurantBasicInfoViewController : NSObject  <UIAlertViewDelegate>
+@property (readwrite) Appoinment *appoinment;
 @property (readwrite) Restaurant *restaurant;
 @property IBOutlet UILabel *titleTextView;
 @property IBOutlet UILabel *phoneNumView;
 @property IBOutlet UILabel *addrNumView;
 @property IBOutlet UIImageView *logoView;
+@property IBOutlet UIButton *reverseButton;
+@property IBOutlet UIViewController *mainView;
+- (IBAction)makeReservation:(id)sender;
 @end

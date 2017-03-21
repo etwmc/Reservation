@@ -18,30 +18,45 @@
 		1EF8FDC618B368D50030874F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF8FDC518B368D50030874F /* Default@2x.png */; };
 		1EF8FDC818B368D60030874F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EF8FDC718B368D60030874F /* Default-568h@2x.png */; };
 		1EF8FDCB18B368D60030874F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EF8FDC918B368D60030874F /* MainStoryboard.storyboard */; };
-		1EF8FDE118B368D60030874F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF8FDE018B368D60030874F /* SenTestingKit.framework */; };
-		1EF8FDE218B368D60030874F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF8FDB118B368D50030874F /* UIKit.framework */; };
-		1EF8FDE318B368D60030874F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF8FDB318B368D50030874F /* Foundation.framework */; };
-		1EF8FDEB18B368D70030874F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EF8FDE918B368D70030874F /* InfoPlist.strings */; };
-		1EF8FDEE18B368D70030874F /* ReservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EF8FDED18B368D70030874F /* ReservationTests.m */; };
-		1EF8FDFA18B36B400030874F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EF8FDF818B36B400030874F /* LoginViewController.m */; };
 		1EF8FDFB18B36B400030874F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EF8FDF918B36B400030874F /* LoginViewController.xib */; };
 		1EF8FDFE18B3700E0030874F /* AppoinmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EF8FDFD18B3700E0030874F /* AppoinmentViewController.m */; };
+		33027ED918F0618800CC2498 /* CurrentOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33027ED818F0618800CC2498 /* CurrentOrderModel.m */; };
+		3309A32618F2BA60003110E1 /* MenuEntityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3309A32518F2BA60003110E1 /* MenuEntityTableViewCell.m */; };
+		33342BB218EAEDE500780F04 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33342BB118EAEDE500780F04 /* LoginViewController.m */; };
+		334C81DE1CB25DF4008ED20E /* Multithread.m in Sources */ = {isa = PBXBuildFile; fileRef = 334C81DD1CB25DF4008ED20E /* Multithread.m */; };
 		335CDE0018D320870007A35B /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 335CDDFF18D320870007A35B /* LoginModel.m */; };
 		33627DB518B7042400DDF5E1 /* CurrentAvailableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33627DB418B7042400DDF5E1 /* CurrentAvailableViewController.m */; };
 		33627DB918B704A200DDF5E1 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 33627DB818B704A200DDF5E1 /* Restaurant.m */; };
 		33627DBE18B708B900DDF5E1 /* RestaurantInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33627DBC18B708B900DDF5E1 /* RestaurantInfoViewController.m */; };
 		33627DBF18B708B900DDF5E1 /* RestaurantInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33627DBD18B708B900DDF5E1 /* RestaurantInfoViewController.xib */; };
 		33627DC318B70CB900DDF5E1 /* RestaurantBasicInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33627DC118B70CB900DDF5E1 /* RestaurantBasicInfoViewController.m */; };
+		336A53911E80E7BB00C1B43E /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336A53901E80E7BB00C1B43E /* PassKit.framework */; };
+		336EBDB7191175460012AEA6 /* MenuModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 336EBDB6191175460012AEA6 /* MenuModelTest.m */; };
+		33B2DB13190692FD00A73313 /* ReserveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B2DB11190692FD00A73313 /* ReserveViewController.m */; };
+		33B2DB14190692FD00A73313 /* ReserveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33B2DB12190692FD00A73313 /* ReserveViewController.xib */; };
 		33B62F6118BB6856003DE9B7 /* AppoinmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B62F6018BB6856003DE9B7 /* AppoinmentModel.m */; };
 		33B62F6418BB68D7003DE9B7 /* Appoinment.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B62F6318BB68D7003DE9B7 /* Appoinment.m */; };
-		33B62F6718BB6D45003DE9B7 /* AppoinmentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B62F6618BB6D45003DE9B7 /* AppoinmentDetailViewController.m */; };
+		33D32D1218EA619B0007D3DB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D32D1118EA619B0007D3DB /* CoreLocation.framework */; };
 		33D4B62718BAE46300114638 /* RestaurantInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D4B62618BAE46300114638 /* RestaurantInfoController.m */; };
 		33D4B62A18BAF99D00114638 /* RestaurantList_Reservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D4B62918BAF99D00114638 /* RestaurantList_Reservation.m */; };
+		33DD5E7D18EBD1CD007CC861 /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DD5E7B18EBD1CD007CC861 /* CommentTableViewCell.m */; };
+		33DD5E7E18EBD1CD007CC861 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33DD5E7C18EBD1CD007CC861 /* CommentTableViewCell.xib */; };
+		33DD5E8518EC25DC007CC861 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DD5E8418EC25DC007CC861 /* LoadingViewController.m */; };
+		33DE87E018F28B9200F0E9CD /* CurrentOrderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DE87DE18F28B9200F0E9CD /* CurrentOrderTableViewController.m */; };
+		33DE87E118F28B9200F0E9CD /* CurrentOrderTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33DE87DF18F28B9200F0E9CD /* CurrentOrderTableViewController.xib */; };
+		33DE87E518F28BE900F0E9CD /* MenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DE87E418F28BE900F0E9CD /* MenuModel.m */; };
 		33ED1E9A18B6D512005A61BA /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33ED1E9918B6D512005A61BA /* Media.xcassets */; };
+		33F5D6D918FBE18400EACC67 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F5D6D818FBE18400EACC67 /* XCTest.framework */; };
+		33F5D6DA18FBE18400EACC67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF8FDB318B368D50030874F /* Foundation.framework */; };
+		33F5D6DB18FBE18400EACC67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF8FDB118B368D50030874F /* UIKit.framework */; };
+		33F5D6E118FBE18400EACC67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33F5D6DF18FBE18400EACC67 /* InfoPlist.strings */; };
+		33F5D6E318FBE18400EACC67 /* Reservation_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F5D6E218FBE18400EACC67 /* Reservation_Tests.m */; };
+		33FEBEC818FD16DF00A20320 /* Reservation_RestaurantModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FEBEC718FD16DF00A20320 /* Reservation_RestaurantModelTest.m */; };
+		33FEBECA18FD1CDA00A20320 /* Reservation_AppoinmentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FEBEC918FD1CDA00A20320 /* Reservation_AppoinmentTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1EF8FDE418B368D60030874F /* PBXContainerItemProxy */ = {
+		33F5D6E518FBE18400EACC67 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1EF8FDA618B368D30030874F /* Project object */;
 			proxyType = 1;
@@ -67,17 +82,18 @@
 		1EF8FDC518B368D50030874F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1EF8FDC718B368D60030874F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1EF8FDCA18B368D60030874F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		1EF8FDDF18B368D60030874F /* ReservationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReservationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF8FDE018B368D60030874F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		1EF8FDE818B368D60030874F /* ReservationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ReservationTests-Info.plist"; sourceTree = "<group>"; };
-		1EF8FDEA18B368D70030874F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1EF8FDEC18B368D70030874F /* ReservationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReservationTests.h; sourceTree = "<group>"; };
-		1EF8FDED18B368D70030874F /* ReservationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReservationTests.m; sourceTree = "<group>"; };
-		1EF8FDF718B36B400030874F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		1EF8FDF818B36B400030874F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		1EF8FDF918B36B400030874F /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		1EF8FDFC18B3700E0030874F /* AppoinmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppoinmentViewController.h; sourceTree = "<group>"; };
 		1EF8FDFD18B3700E0030874F /* AppoinmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppoinmentViewController.m; sourceTree = "<group>"; };
+		33027ED718F0618800CC2498 /* CurrentOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentOrderModel.h; sourceTree = "<group>"; };
+		33027ED818F0618800CC2498 /* CurrentOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentOrderModel.m; sourceTree = "<group>"; };
+		3309A32418F2BA60003110E1 /* MenuEntityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuEntityTableViewCell.h; sourceTree = "<group>"; };
+		3309A32518F2BA60003110E1 /* MenuEntityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuEntityTableViewCell.m; sourceTree = "<group>"; };
+		33342BB018EAEDE500780F04 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		33342BB118EAEDE500780F04 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		334C81DC1CB25DF4008ED20E /* Multithread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Multithread.h; sourceTree = "<group>"; };
+		334C81DD1CB25DF4008ED20E /* Multithread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Multithread.m; sourceTree = "<group>"; };
 		335CDDFE18D320870007A35B /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
 		335CDDFF18D320870007A35B /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
 		335CDE0118D3209A0007A35B /* ProjectConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectConstant.h; sourceTree = "<group>"; };
@@ -90,17 +106,53 @@
 		33627DBD18B708B900DDF5E1 /* RestaurantInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantInfoViewController.xib; sourceTree = "<group>"; };
 		33627DC018B70CB900DDF5E1 /* RestaurantBasicInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantBasicInfoViewController.h; sourceTree = "<group>"; };
 		33627DC118B70CB900DDF5E1 /* RestaurantBasicInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantBasicInfoViewController.m; sourceTree = "<group>"; };
+		336A53901E80E7BB00C1B43E /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		336EBDB6191175460012AEA6 /* MenuModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuModelTest.m; sourceTree = "<group>"; };
+		33B2DB10190692FD00A73313 /* ReserveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReserveViewController.h; sourceTree = "<group>"; };
+		33B2DB11190692FD00A73313 /* ReserveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReserveViewController.m; sourceTree = "<group>"; };
+		33B2DB12190692FD00A73313 /* ReserveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReserveViewController.xib; sourceTree = "<group>"; };
 		33B62F5F18BB6856003DE9B7 /* AppoinmentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppoinmentModel.h; sourceTree = "<group>"; };
 		33B62F6018BB6856003DE9B7 /* AppoinmentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppoinmentModel.m; sourceTree = "<group>"; };
 		33B62F6218BB68D7003DE9B7 /* Appoinment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appoinment.h; sourceTree = "<group>"; };
 		33B62F6318BB68D7003DE9B7 /* Appoinment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appoinment.m; sourceTree = "<group>"; };
-		33B62F6518BB6D45003DE9B7 /* AppoinmentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppoinmentDetailViewController.h; sourceTree = "<group>"; };
-		33B62F6618BB6D45003DE9B7 /* AppoinmentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppoinmentDetailViewController.m; sourceTree = "<group>"; };
+		33D32D1118EA619B0007D3DB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		33D4B62518BAE46300114638 /* RestaurantInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantInfoController.h; sourceTree = "<group>"; };
 		33D4B62618BAE46300114638 /* RestaurantInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantInfoController.m; sourceTree = "<group>"; };
 		33D4B62818BAF99D00114638 /* RestaurantList_Reservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantList_Reservation.h; sourceTree = "<group>"; };
 		33D4B62918BAF99D00114638 /* RestaurantList_Reservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantList_Reservation.m; sourceTree = "<group>"; };
+		33DD5E7A18EBD1CD007CC861 /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		33DD5E7B18EBD1CD007CC861 /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
+		33DD5E7C18EBD1CD007CC861 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		33DD5E8318EC25DC007CC861 /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
+		33DD5E8418EC25DC007CC861 /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
+		33DE87DD18F28B9200F0E9CD /* CurrentOrderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentOrderTableViewController.h; sourceTree = "<group>"; };
+		33DE87DE18F28B9200F0E9CD /* CurrentOrderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentOrderTableViewController.m; sourceTree = "<group>"; };
+		33DE87DF18F28B9200F0E9CD /* CurrentOrderTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentOrderTableViewController.xib; sourceTree = "<group>"; };
+		33DE87E318F28BE900F0E9CD /* MenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuModel.h; sourceTree = "<group>"; };
+		33DE87E418F28BE900F0E9CD /* MenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuModel.m; sourceTree = "<group>"; };
+		33E9EB8B1902980E001AE75F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		33E9EB8C1902980E001AE75F /* cleancov */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = cleancov; sourceTree = "<group>"; };
+		33E9EB8D1902980E001AE75F /* env.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = env.sh; sourceTree = "<group>"; };
+		33E9EB8E1902980E001AE75F /* envcov.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = envcov.sh; sourceTree = "<group>"; };
+		33E9EB8F1902980E001AE75F /* exportenv.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = exportenv.sh; sourceTree = "<group>"; };
+		33E9EB901902980E001AE75F /* getcov */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = getcov; sourceTree = "<group>"; };
+		33E9EB931902980E001AE75F /* genhtml */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = genhtml; sourceTree = "<group>"; };
+		33E9EB941902980E001AE75F /* geninfo */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = geninfo; sourceTree = "<group>"; };
+		33E9EB951902980E001AE75F /* lcov */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = lcov; sourceTree = "<group>"; };
+		33E9EB961902980E001AE75F /* COPYING */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		33E9EB971902980E001AE75F /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		33E9EB981902980E001AE75F /* llvm-cov-wrapper.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "llvm-cov-wrapper.sh"; sourceTree = "<group>"; };
+		33E9EB991902980E001AE75F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		33E9EB9A1902980E001AE75F /* run_code_coverage_post.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = run_code_coverage_post.sh; sourceTree = "<group>"; };
 		33ED1E9918B6D512005A61BA /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		33F5D6D718FBE18400EACC67 /* ReservationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReservationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33F5D6D818FBE18400EACC67 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		33F5D6DE18FBE18400EACC67 /* Reservation Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Reservation Tests-Info.plist"; sourceTree = "<group>"; };
+		33F5D6E018FBE18400EACC67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		33F5D6E218FBE18400EACC67 /* Reservation_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reservation_Tests.m; sourceTree = "<group>"; };
+		33F5D6E418FBE18400EACC67 /* Reservation Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Reservation Tests-Prefix.pch"; sourceTree = "<group>"; };
+		33FEBEC718FD16DF00A20320 /* Reservation_RestaurantModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reservation_RestaurantModelTest.m; sourceTree = "<group>"; };
+		33FEBEC918FD1CDA00A20320 /* Reservation_AppoinmentTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reservation_AppoinmentTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,19 +160,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				336A53911E80E7BB00C1B43E /* PassKit.framework in Frameworks */,
+				33D32D1218EA619B0007D3DB /* CoreLocation.framework in Frameworks */,
 				1EF8FDB218B368D50030874F /* UIKit.framework in Frameworks */,
 				1EF8FDB418B368D50030874F /* Foundation.framework in Frameworks */,
 				1EF8FDB618B368D50030874F /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1EF8FDDB18B368D60030874F /* Frameworks */ = {
+		33F5D6D418FBE18400EACC67 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EF8FDE118B368D60030874F /* SenTestingKit.framework in Frameworks */,
-				1EF8FDE218B368D60030874F /* UIKit.framework in Frameworks */,
-				1EF8FDE318B368D60030874F /* Foundation.framework in Frameworks */,
+				33F5D6D918FBE18400EACC67 /* XCTest.framework in Frameworks */,
+				33F5D6DB18FBE18400EACC67 /* UIKit.framework in Frameworks */,
+				33F5D6DA18FBE18400EACC67 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,9 +186,10 @@
 			children = (
 				335CDE0118D3209A0007A35B /* ProjectConstant.h */,
 				1EF8FDB718B368D50030874F /* Reservation */,
-				1EF8FDE618B368D60030874F /* ReservationTests */,
+				33F5D6DC18FBE18400EACC67 /* ReservationTests */,
 				1EF8FDB018B368D50030874F /* Frameworks */,
 				1EF8FDAF18B368D50030874F /* Products */,
+				33E9EB8A1902980E001AE75F /* XcodeCoverage */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,7 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				1EF8FDAE18B368D50030874F /* Reservation.app */,
-				1EF8FDDF18B368D60030874F /* ReservationTests.octest */,
+				33F5D6D718FBE18400EACC67 /* ReservationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,10 +205,13 @@
 		1EF8FDB018B368D50030874F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				336A53901E80E7BB00C1B43E /* PassKit.framework */,
+				33D32D1118EA619B0007D3DB /* CoreLocation.framework */,
 				1EF8FDB118B368D50030874F /* UIKit.framework */,
 				1EF8FDB318B368D50030874F /* Foundation.framework */,
 				1EF8FDB518B368D50030874F /* CoreGraphics.framework */,
 				1EF8FDE018B368D60030874F /* SenTestingKit.framework */,
+				33F5D6D818FBE18400EACC67 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -161,6 +219,7 @@
 		1EF8FDB718B368D50030874F /* Reservation */ = {
 			isa = PBXGroup;
 			children = (
+				334C81DB1CB25D33008ED20E /* Backbone */,
 				33B62F6818BB786D003DE9B7 /* Level 1 */,
 				33B62F6918BB7874003DE9B7 /* View On Demand */,
 				33627DB618B7049000DDF5E1 /* Object */,
@@ -187,34 +246,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1EF8FDE618B368D60030874F /* ReservationTests */ = {
+		33027ED318F0576D00CC2498 /* Current Order View */ = {
 			isa = PBXGroup;
 			children = (
-				1EF8FDEC18B368D70030874F /* ReservationTests.h */,
-				1EF8FDED18B368D70030874F /* ReservationTests.m */,
-				1EF8FDE718B368D60030874F /* Supporting Files */,
+				33027ED718F0618800CC2498 /* CurrentOrderModel.h */,
+				33027ED818F0618800CC2498 /* CurrentOrderModel.m */,
+				33DE87E218F28BA000F0E9CD /* View */,
 			);
-			path = ReservationTests;
+			name = "Current Order View";
 			sourceTree = "<group>";
 		};
-		1EF8FDE718B368D60030874F /* Supporting Files */ = {
+		334C81DB1CB25D33008ED20E /* Backbone */ = {
 			isa = PBXGroup;
 			children = (
-				1EF8FDE818B368D60030874F /* ReservationTests-Info.plist */,
-				1EF8FDE918B368D70030874F /* InfoPlist.strings */,
+				334C81DC1CB25DF4008ED20E /* Multithread.h */,
+				334C81DD1CB25DF4008ED20E /* Multithread.m */,
 			);
-			name = "Supporting Files";
+			name = Backbone;
 			sourceTree = "<group>";
 		};
 		33627DAF18B7031500DDF5E1 /* Appoinment */ = {
 			isa = PBXGroup;
 			children = (
-				33B62F5F18BB6856003DE9B7 /* AppoinmentModel.h */,
-				33B62F6018BB6856003DE9B7 /* AppoinmentModel.m */,
 				1EF8FDFC18B3700E0030874F /* AppoinmentViewController.h */,
 				1EF8FDFD18B3700E0030874F /* AppoinmentViewController.m */,
-				33B62F6518BB6D45003DE9B7 /* AppoinmentDetailViewController.h */,
-				33B62F6618BB6D45003DE9B7 /* AppoinmentDetailViewController.m */,
 			);
 			name = Appoinment;
 			sourceTree = "<group>";
@@ -233,11 +288,9 @@
 		33627DB118B7033200DDF5E1 /* Login View */ = {
 			isa = PBXGroup;
 			children = (
-				1EF8FDF718B36B400030874F /* LoginViewController.h */,
-				1EF8FDF818B36B400030874F /* LoginViewController.m */,
+				33342BB018EAEDE500780F04 /* LoginViewController.h */,
+				33342BB118EAEDE500780F04 /* LoginViewController.m */,
 				1EF8FDF918B36B400030874F /* LoginViewController.xib */,
-				335CDDFE18D320870007A35B /* LoginModel.h */,
-				335CDDFF18D320870007A35B /* LoginModel.m */,
 			);
 			name = "Login View";
 			sourceTree = "<group>";
@@ -254,10 +307,16 @@
 		33627DB618B7049000DDF5E1 /* Object */ = {
 			isa = PBXGroup;
 			children = (
+				33B62F5F18BB6856003DE9B7 /* AppoinmentModel.h */,
+				33B62F6018BB6856003DE9B7 /* AppoinmentModel.m */,
+				335CDDFE18D320870007A35B /* LoginModel.h */,
+				335CDDFF18D320870007A35B /* LoginModel.m */,
 				33B62F6218BB68D7003DE9B7 /* Appoinment.h */,
 				33B62F6318BB68D7003DE9B7 /* Appoinment.m */,
 				33627DB718B704A200DDF5E1 /* Restaurant.h */,
 				33627DB818B704A200DDF5E1 /* Restaurant.m */,
+				33DE87E318F28BE900F0E9CD /* MenuModel.h */,
+				33DE87E418F28BE900F0E9CD /* MenuModel.m */,
 			);
 			name = Object;
 			sourceTree = "<group>";
@@ -265,15 +324,27 @@
 		33627DBA18B7089C00DDF5E1 /* Restaurant Info */ = {
 			isa = PBXGroup;
 			children = (
+				33DD5E8618ED1762007CC861 /* Comment */,
 				33627DBB18B708B900DDF5E1 /* RestaurantInfoViewController.h */,
 				33627DBC18B708B900DDF5E1 /* RestaurantInfoViewController.m */,
-				33627DBD18B708B900DDF5E1 /* RestaurantInfoViewController.xib */,
 				33627DC018B70CB900DDF5E1 /* RestaurantBasicInfoViewController.h */,
 				33627DC118B70CB900DDF5E1 /* RestaurantBasicInfoViewController.m */,
 				33D4B62518BAE46300114638 /* RestaurantInfoController.h */,
 				33D4B62618BAE46300114638 /* RestaurantInfoController.m */,
+				33627DBD18B708B900DDF5E1 /* RestaurantInfoViewController.xib */,
+				33B2DB0F19068BCE00A73313 /* Reserve */,
 			);
 			name = "Restaurant Info";
+			sourceTree = "<group>";
+		};
+		33B2DB0F19068BCE00A73313 /* Reserve */ = {
+			isa = PBXGroup;
+			children = (
+				33B2DB10190692FD00A73313 /* ReserveViewController.h */,
+				33B2DB11190692FD00A73313 /* ReserveViewController.m */,
+				33B2DB12190692FD00A73313 /* ReserveViewController.xib */,
+			);
+			name = Reserve;
 			sourceTree = "<group>";
 		};
 		33B62F6818BB786D003DE9B7 /* Level 1 */ = {
@@ -282,6 +353,7 @@
 				33627DB218B703ED00DDF5E1 /* Available List */,
 				33627DB018B7032A00DDF5E1 /* Reservation */,
 				33627DAF18B7031500DDF5E1 /* Appoinment */,
+				33027ED318F0576D00CC2498 /* Current Order View */,
 			);
 			name = "Level 1";
 			sourceTree = "<group>";
@@ -289,10 +361,102 @@
 		33B62F6918BB7874003DE9B7 /* View On Demand */ = {
 			isa = PBXGroup;
 			children = (
+				33DD5E7F18EC2509007CC861 /* Loading View */,
 				33627DB118B7033200DDF5E1 /* Login View */,
 				33627DBA18B7089C00DDF5E1 /* Restaurant Info */,
 			);
 			name = "View On Demand";
+			sourceTree = "<group>";
+		};
+		33DD5E7F18EC2509007CC861 /* Loading View */ = {
+			isa = PBXGroup;
+			children = (
+				33DD5E8318EC25DC007CC861 /* LoadingViewController.h */,
+				33DD5E8418EC25DC007CC861 /* LoadingViewController.m */,
+			);
+			name = "Loading View";
+			sourceTree = "<group>";
+		};
+		33DD5E8618ED1762007CC861 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				33DD5E7A18EBD1CD007CC861 /* CommentTableViewCell.h */,
+				33DD5E7B18EBD1CD007CC861 /* CommentTableViewCell.m */,
+				33DD5E7C18EBD1CD007CC861 /* CommentTableViewCell.xib */,
+			);
+			name = Comment;
+			sourceTree = "<group>";
+		};
+		33DE87E218F28BA000F0E9CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33DE87DD18F28B9200F0E9CD /* CurrentOrderTableViewController.h */,
+				33DE87DE18F28B9200F0E9CD /* CurrentOrderTableViewController.m */,
+				3309A32418F2BA60003110E1 /* MenuEntityTableViewCell.h */,
+				3309A32518F2BA60003110E1 /* MenuEntityTableViewCell.m */,
+				33DE87DF18F28B9200F0E9CD /* CurrentOrderTableViewController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		33E9EB8A1902980E001AE75F /* XcodeCoverage */ = {
+			isa = PBXGroup;
+			children = (
+				33E9EB8B1902980E001AE75F /* .gitignore */,
+				33E9EB8C1902980E001AE75F /* cleancov */,
+				33E9EB8D1902980E001AE75F /* env.sh */,
+				33E9EB8E1902980E001AE75F /* envcov.sh */,
+				33E9EB8F1902980E001AE75F /* exportenv.sh */,
+				33E9EB901902980E001AE75F /* getcov */,
+				33E9EB911902980E001AE75F /* lcov-1.10 */,
+				33E9EB971902980E001AE75F /* LICENSE.txt */,
+				33E9EB981902980E001AE75F /* llvm-cov-wrapper.sh */,
+				33E9EB991902980E001AE75F /* README.md */,
+				33E9EB9A1902980E001AE75F /* run_code_coverage_post.sh */,
+			);
+			path = XcodeCoverage;
+			sourceTree = "<group>";
+		};
+		33E9EB911902980E001AE75F /* lcov-1.10 */ = {
+			isa = PBXGroup;
+			children = (
+				33E9EB921902980E001AE75F /* bin */,
+				33E9EB961902980E001AE75F /* COPYING */,
+			);
+			path = "lcov-1.10";
+			sourceTree = "<group>";
+		};
+		33E9EB921902980E001AE75F /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				33E9EB931902980E001AE75F /* genhtml */,
+				33E9EB941902980E001AE75F /* geninfo */,
+				33E9EB951902980E001AE75F /* lcov */,
+			);
+			path = bin;
+			sourceTree = "<group>";
+		};
+		33F5D6DC18FBE18400EACC67 /* ReservationTests */ = {
+			isa = PBXGroup;
+			children = (
+				33F5D6E218FBE18400EACC67 /* Reservation_Tests.m */,
+				33FEBEC718FD16DF00A20320 /* Reservation_RestaurantModelTest.m */,
+				33FEBEC918FD1CDA00A20320 /* Reservation_AppoinmentTest.m */,
+				336EBDB6191175460012AEA6 /* MenuModelTest.m */,
+				33F5D6DD18FBE18400EACC67 /* Supporting Files */,
+			);
+			name = ReservationTests;
+			path = "Reservation Tests";
+			sourceTree = "<group>";
+		};
+		33F5D6DD18FBE18400EACC67 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				33F5D6DE18FBE18400EACC67 /* Reservation Tests-Info.plist */,
+				33F5D6DF18FBE18400EACC67 /* InfoPlist.strings */,
+				33F5D6E418FBE18400EACC67 /* Reservation Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +469,7 @@
 				1EF8FDAA18B368D30030874F /* Sources */,
 				1EF8FDAB18B368D30030874F /* Frameworks */,
 				1EF8FDAC18B368D30030874F /* Resources */,
+				334058771910F12900E7B8AC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -315,24 +480,23 @@
 			productReference = 1EF8FDAE18B368D50030874F /* Reservation.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1EF8FDDE18B368D60030874F /* ReservationTests */ = {
+		33F5D6D618FBE18400EACC67 /* ReservationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1EF8FDF418B368D70030874F /* Build configuration list for PBXNativeTarget "ReservationTests" */;
+			buildConfigurationList = 33F5D6E718FBE18400EACC67 /* Build configuration list for PBXNativeTarget "ReservationTests" */;
 			buildPhases = (
-				1EF8FDDA18B368D60030874F /* Sources */,
-				1EF8FDDB18B368D60030874F /* Frameworks */,
-				1EF8FDDC18B368D60030874F /* Resources */,
-				1EF8FDDD18B368D60030874F /* ShellScript */,
+				33F5D6D318FBE18400EACC67 /* Sources */,
+				33F5D6D418FBE18400EACC67 /* Frameworks */,
+				33F5D6D518FBE18400EACC67 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1EF8FDE518B368D60030874F /* PBXTargetDependency */,
+				33F5D6E618FBE18400EACC67 /* PBXTargetDependency */,
 			);
 			name = ReservationTests;
-			productName = ReservationTests;
-			productReference = 1EF8FDDF18B368D60030874F /* ReservationTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productName = "Reservation Tests";
+			productReference = 33F5D6D718FBE18400EACC67 /* ReservationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -340,8 +504,21 @@
 		1EF8FDA618B368D30030874F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastTestingUpgradeCheck = 0510;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "CHAN, Wai Man";
+				TargetAttributes = {
+					1EF8FDAD18B368D30030874F = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					33F5D6D618FBE18400EACC67 = {
+						TestTargetID = 1EF8FDAD18B368D30030874F;
+					};
+				};
 			};
 			buildConfigurationList = 1EF8FDA918B368D30030874F /* Build configuration list for PBXProject "Reservation" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -356,7 +533,7 @@
 			projectRoot = "";
 			targets = (
 				1EF8FDAD18B368D30030874F /* Reservation */,
-				1EF8FDDE18B368D60030874F /* ReservationTests */,
+				33F5D6D618FBE18400EACC67 /* ReservationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -368,27 +545,30 @@
 			files = (
 				1EF8FDBC18B368D50030874F /* InfoPlist.strings in Resources */,
 				1EF8FDC418B368D50030874F /* Default.png in Resources */,
+				33DE87E118F28B9200F0E9CD /* CurrentOrderTableViewController.xib in Resources */,
 				33627DBF18B708B900DDF5E1 /* RestaurantInfoViewController.xib in Resources */,
 				33ED1E9A18B6D512005A61BA /* Media.xcassets in Resources */,
 				1EF8FDC618B368D50030874F /* Default@2x.png in Resources */,
 				1EF8FDC818B368D60030874F /* Default-568h@2x.png in Resources */,
 				1EF8FDCB18B368D60030874F /* MainStoryboard.storyboard in Resources */,
+				33DD5E7E18EBD1CD007CC861 /* CommentTableViewCell.xib in Resources */,
+				33B2DB14190692FD00A73313 /* ReserveViewController.xib in Resources */,
 				1EF8FDFB18B36B400030874F /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1EF8FDDC18B368D60030874F /* Resources */ = {
+		33F5D6D518FBE18400EACC67 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EF8FDEB18B368D70030874F /* InfoPlist.strings in Resources */,
+				33F5D6E118FBE18400EACC67 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1EF8FDDD18B368D60030874F /* ShellScript */ = {
+		334058771910F12900E7B8AC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -399,7 +579,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+			shellScript = "if [ -d ${OBJECT_FILE_DIR_normal}/i386 ]; then\nchmod 775 ${OBJECT_FILE_DIR_normal}/i386\nfi\nXcodeCoverage/exportenv.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -409,38 +589,48 @@
 			buildActionMask = 2147483647;
 			files = (
 				33D4B62718BAE46300114638 /* RestaurantInfoController.m in Sources */,
+				3309A32618F2BA60003110E1 /* MenuEntityTableViewCell.m in Sources */,
+				33B2DB13190692FD00A73313 /* ReserveViewController.m in Sources */,
 				1EF8FDBE18B368D50030874F /* main.m in Sources */,
-				33B62F6718BB6D45003DE9B7 /* AppoinmentDetailViewController.m in Sources */,
 				33627DB918B704A200DDF5E1 /* Restaurant.m in Sources */,
 				33B62F6418BB68D7003DE9B7 /* Appoinment.m in Sources */,
 				1EF8FDC218B368D50030874F /* AppDelegate.m in Sources */,
 				33627DC318B70CB900DDF5E1 /* RestaurantBasicInfoViewController.m in Sources */,
-				1EF8FDFA18B36B400030874F /* LoginViewController.m in Sources */,
 				1EF8FDFE18B3700E0030874F /* AppoinmentViewController.m in Sources */,
 				33627DBE18B708B900DDF5E1 /* RestaurantInfoViewController.m in Sources */,
 				33B62F6118BB6856003DE9B7 /* AppoinmentModel.m in Sources */,
+				33027ED918F0618800CC2498 /* CurrentOrderModel.m in Sources */,
 				33627DB518B7042400DDF5E1 /* CurrentAvailableViewController.m in Sources */,
 				33D4B62A18BAF99D00114638 /* RestaurantList_Reservation.m in Sources */,
+				33342BB218EAEDE500780F04 /* LoginViewController.m in Sources */,
+				334C81DE1CB25DF4008ED20E /* Multithread.m in Sources */,
 				1E39E2AB18B4A6460003201A /* FoodTypeViewController.m in Sources */,
+				33DE87E018F28B9200F0E9CD /* CurrentOrderTableViewController.m in Sources */,
+				33DD5E7D18EBD1CD007CC861 /* CommentTableViewCell.m in Sources */,
 				335CDE0018D320870007A35B /* LoginModel.m in Sources */,
+				33DD5E8518EC25DC007CC861 /* LoadingViewController.m in Sources */,
+				33DE87E518F28BE900F0E9CD /* MenuModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1EF8FDDA18B368D60030874F /* Sources */ = {
+		33F5D6D318FBE18400EACC67 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EF8FDEE18B368D70030874F /* ReservationTests.m in Sources */,
+				33F5D6E318FBE18400EACC67 /* Reservation_Tests.m in Sources */,
+				33FEBEC818FD16DF00A20320 /* Reservation_RestaurantModelTest.m in Sources */,
+				336EBDB7191175460012AEA6 /* MenuModelTest.m in Sources */,
+				33FEBECA18FD1CDA00A20320 /* Reservation_AppoinmentTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1EF8FDE518B368D60030874F /* PBXTargetDependency */ = {
+		33F5D6E618FBE18400EACC67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1EF8FDAD18B368D30030874F /* Reservation */;
-			targetProxy = 1EF8FDE418B368D60030874F /* PBXContainerItemProxy */;
+			targetProxy = 33F5D6E518FBE18400EACC67 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -461,10 +651,10 @@
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
-		1EF8FDE918B368D70030874F /* InfoPlist.strings */ = {
+		33F5D6DF18FBE18400EACC67 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1EF8FDEA18B368D70030874F /* en */,
+				33F5D6E018FBE18400EACC67 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -486,8 +676,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -497,8 +690,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -518,11 +712,14 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -531,9 +728,17 @@
 		1EF8FDF218B368D70030874F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Reservation/Reservation-Prefix.pch";
 				INFOPLIST_FILE = "Reservation/Reservation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "WmC.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -542,45 +747,82 @@
 		1EF8FDF318B368D70030874F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Reservation/Reservation-Prefix.pch";
 				INFOPLIST_FILE = "Reservation/Reservation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "WmC.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		1EF8FDF518B368D70030874F /* Debug */ = {
+		33F5D6E818FBE18400EACC67 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Reservation.app/Reservation";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Reservation/Reservation-Prefix.pch";
-				INFOPLIST_FILE = "ReservationTests/ReservationTests-Info.plist";
+				GCC_PREFIX_HEADER = "Reservation Tests/Reservation Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "Reservation Tests/Reservation Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "WMC.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
-		1EF8FDF618B368D70030874F /* Release */ = {
+		33F5D6E918FBE18400EACC67 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Reservation.app/Reservation";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Reservation/Reservation-Prefix.pch";
-				INFOPLIST_FILE = "ReservationTests/ReservationTests-Info.plist";
+				GCC_PREFIX_HEADER = "Reservation Tests/Reservation Tests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "Reservation Tests/Reservation Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "WMC.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -605,11 +847,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1EF8FDF418B368D70030874F /* Build configuration list for PBXNativeTarget "ReservationTests" */ = {
+		33F5D6E718FBE18400EACC67 /* Build configuration list for PBXNativeTarget "ReservationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1EF8FDF518B368D70030874F /* Debug */,
-				1EF8FDF618B368D70030874F /* Release */,
+				33F5D6E818FBE18400EACC67 /* Debug */,
+				33F5D6E918FBE18400EACC67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

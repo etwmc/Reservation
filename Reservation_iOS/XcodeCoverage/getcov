@@ -1,0 +1,48 @@
+#!/bin/sh
+#
+#   Copyright 2014 Jonathan M. Reid. See LICENSE.txt
+#   Created by: Jon Reid, http://qualitycoding.org/
+#   Source: https://github.com/jonreid/XcodeCoverage
+#
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+source "${DIR}/envcov.sh"
+
+remove_old_report()
+{
+    pushd ${BUILT_PRODUCTS_DIR}
+    if [ -e lcov ]; then
+        rm -r lcov
+    fi
+    popd
+}
+
+enter_lcov_dir()
+{
+    cd ${BUILT_PRODUCTS_DIR}
+    mkdir lcov
+    cd lcov
+}
+
+gather_coverage()
+{
+    LCOV --rc lcov_branch_coverage=1  --capture --derive-func-data -b "${SRCROOT}" -d "${OBJ_DIR}" -o ${LCOV_INFO}
+}
+
+exclude_data()
+{
+LCOV --remove ${LCOV_INFO} "Applications/Xcode.app/*" -d "${OBJ_DIR}" -o ${LCOV_INFO}
+LCOV --remove ${LCOV_INFO} "AppDelegate.h" -d "${OBJ_DIR}" -o ${LCOV_INFO}
+LCOV --remove ${LCOV_INFO} "AppDelegate.m" -d "${OBJ_DIR}" -o ${LCOV_INFO}
+    # Remove other patterns here...
+}
+
+generate_report()
+{
+    "${LCOV_PATH}/genhtml"  --rc lcov_branch_coverage=1 --output-directory . ${LCOV_INFO}
+}
+
+remove_old_report
+enter_lcov_dir
+gather_coverage
+exclude_data
+generate_report

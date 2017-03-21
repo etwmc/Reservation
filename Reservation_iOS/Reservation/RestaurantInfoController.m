@@ -7,10 +7,13 @@
 //
 
 #import "RestaurantInfoController.h"
+#import "CommentTableViewCell.h"
+#import "ProjectConstant.h"
 
-@interface RestaurantInfoController () {
+@interface RestaurantInfoController () <UITableViewDataSource, UITableViewDelegate> {
     restaurantInfoType _type;
     UIView *_infoView;
+    NSArray *comments;
 }
 @end
 @implementation RestaurantInfoController
@@ -34,7 +37,7 @@
         case RestaurantGeneralInfo:
             return 5;
         case RestaurantComment:
-            return 20;
+            return comments.count;
         case RestaurantMenu:
             return 2;
         default:
@@ -50,7 +53,8 @@
                 case 0: {
                     NSDateFormatter *formatter = [NSDateFormatter new];
                     formatter.dateStyle = NSDateFormatterNoStyle; formatter.timeStyle = NSDateFormatterShortStyle;
-                    cell.textLabel.text = [NSString stringWithFormat:@"Hour: %@-%@", [formatter stringFromDate:restaurant.openHour], [formatter stringFromDate:restaurant.closeHour]];
+                    if ([restaurant.openHour isEqualToDate:restaurant.closeHour]) cell.textLabel.text = NSLocalizedString(@"24 Hours", "Restaurant is 24 hours open");
+                    else cell.textLabel.text = [NSString stringWithFormat:@"Hour: %@-%@", [formatter stringFromDate:restaurant.openHour], [formatter stringFromDate:restaurant.closeHour]];
                 }
                     break;
                 case 1: {
@@ -79,7 +83,17 @@
         }
             break;
         case RestaurantComment: {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Comment" forIndexPath:indexPath];
+            CommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Comment" forIndexPath:indexPath];
+            if (cell == NULL) {
+                NSArray *cells = [[NSBundle mainBundle] loadNibNamed:@"CommentTableViewCell" owner:self options:NULL];
+                cell = cells[0];
+            }
+            NSDictionary *dict = comments[indexPath.row];
+            cell.comment = dict[@"review"];
+            cell.writer = dict[@"uid"];
+            if (((NSNumber *)dict[@"star"]))
+                cell.numberOfStar = ((NSNumber *)dict[@"star"]).intValue;
+            else cell.numberOfStar = 0;
             return cell;
         }
             break;
@@ -87,6 +101,15 @@
         default:
             return NULL;
             break;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (self.infoType) {
+        case RestaurantComment:
+            return 130;
+        default:
+            return 44;
     }
 }
 
@@ -128,11 +151,15 @@
         case RestaurantComment:
         case RestaurantGeneralInfo:
         case RestaurantMenu: {
-            _infoView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) style:UITableViewStylePlain];
+            if (_type == RestaurantMenu)
+                _infoView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) style:UITableViewStyleGrouped];
+            else _infoView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) style:UITableViewStylePlain];
             [((UITableView *)_infoView) registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Info"];
-            [((UITableView *)_infoView) registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Comment"];
+            
+            [((UITableView *)_infoView) registerNib:[UINib nibWithNibName:@"CommentTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"Comment"];
+            
             [((UITableView *)_infoView) registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Menu"];
-            ((UITableView *)_infoView).dataSource = ((UITableView *)_infoView).delegate = self;
+            ((UITableView *)_infoView).dataSource = self;   ((UITableView *)_infoView).delegate = self;
         }
             break;
         case RestaurantPhoto: {
@@ -140,17 +167,28 @@
             layout.itemSize = CGSizeMake(80, 80);
             layout.scrollDirection = UICollectionViewScrollDirectionVertical;
             _infoView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) collectionViewLayout:layout];
-            ((UICollectionView *)_infoView).dataSource = ((UICollectionView *)_infoView).delegate = self;
+            ((UICollectionView *)_infoView).dataSource = self;  ((UICollectionView *)_infoView).delegate = self;
             [((UICollectionView *)_infoView) registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Photo"];
-            _infoView.backgroundColor = [UIColor redColor];
+            _infoView.backgroundColor = [UIColor whiteColor];
         }
             break;
         default:
             _infoView = NULL;
             break;
     }
-}
-- (UIView *)infoView {
+    switch (_type) {
+        case RestaurantComment:
+            [self updateCommet:self];
+            [((UITableView *)_infoView) reloadData];
+            break;
+        case RestaurantGeneralInfo:
+        case RestaurantMenu:
+            break;
+        case RestaurantPhoto:
+            break;
+        default:
+            break;
+    }
     [_infoView layoutSubviews];
     switch (_type) {
         case RestaurantGeneralInfo:
@@ -165,6 +203,15 @@
         default:
             break;
     }
+}
+- (void)updateCommet:(id)sender {
+    NSString *addr = [NSString stringWithFormat:CommentAddress, restaurant.sid];
+    NSURL *commentURL = [NSURL URLWithString:addr];
+    NSData *data = [NSData dataWithContentsOfURL:commentURL];
+    comments = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:NULL];
+    [((UITableView *) _infoView) reloadData];
+}
+- (UIView *)infoView {
     return _infoView;
 }
 @end

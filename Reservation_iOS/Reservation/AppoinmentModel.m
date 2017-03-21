@@ -8,10 +8,31 @@
 
 #import "AppoinmentModel.h"
 #import "Appoinment.h"
+#import "LoginModel.h"
+#import "ProjectConstant.h"
+
+@interface AppoinmentModel () {
+}
+@end
 
 @implementation AppoinmentModel
-- (NSArray *)appoinments {
-    return @[[Appoinment testCase], [Appoinment testCase], [Appoinment testCase]];
+@synthesize appoinments, available, delegate;
+- (void)refresh {
+    if (appoinments.count) [((NSMutableArray *)appoinments) removeAllObjects];
+    LoginModel *loginModel = [LoginModel shareModel];
+    [loginModel queryWithAddress:AppoinmentFetchAddr  withQuery:^(NSData *data) {
+        NSArray *list = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:NULL];
+        appoinments = [NSMutableArray new];
+        for (NSDictionary *dictionary in list) {
+            [((NSMutableArray *)appoinments) addObject:[[Appoinment alloc] initWithDictionary:dictionary]];
+        }
+        available = true;
+        [delegate appoinmentModelUpdate];
+    } cancel:^{
+        appoinments = @[];
+        available = false;
+        [delegate appoinmentModelUpdate];
+    }];
 }
 + (AppoinmentModel *)shareModel {
     static AppoinmentModel *model = NULL;
